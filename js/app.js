@@ -1,5 +1,5 @@
 // ============================================================================ // CONFIGURACIÓN DE CONEXIÓN A SUPABASE // ============================================================================ // IMPORTANTE: Utiliza únicamente la anon key (clave pública para el cliente web)
-const SUPABASE_URL = 'https://emrbtwvxbavxubvcsgsx.supabase.co'; 
+const SUPABASE_URL = 'https://emrbtwvxbavxubvcsgsx.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVtcmJ0d3Z4YmF2eHVidmNzZ3N4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE0OTI1MTcsImV4cCI6MjEwNzA2ODUxN30.R8yEKXwPzFVq8ZLgxUKa3p8z3srMM33iI0QdMYwX2cI';
 // Inicializar el cliente Supabase const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 // Referencias a los elementos del DOM
