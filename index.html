@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Etnobotánico - Santiago Yeche</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts para una tipografía limpia y legible -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Supabase JS Client vía CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
 
+    <!-- Encabezado del Sistema -->
+    <header class="header">
+        <div class="container header-content">
+            <span class="badge-region">Jocotitlán, Estado de México</span>
+            <h1>Catálogo de Medicina Tradicional</h1>
+            <p class="subtitle">Prescripción y consulta técnica de productos botánicos de Santiago Yeche</p>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main class="container main-content">
+        
+        <!-- Barra de Búsqueda y Filtros -->
+        <section class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="Escribe un síntoma o dolencia (ej. tos, dolor muscular, inflamación)..."
+                    autocomplete="off"
+                >
+                <button id="search-btn">Buscar</button>
+            </div>
+            
+            <!-- Botones de Acceso Rápido -->
+            <div class="quick-tags">
+                <span>Búsquedas frecuentes:</span>
+                <button class="tag-btn" data-query="tos">Tos</button>
+                <button class="tag-btn" data-query="dolor muscular">Dolor muscular</button>
+                <button class="tag-btn" data-query="inflamación">Inflamación</button>
+                <button class="tag-btn" data-query="pomada">Pomadas</button>
+                <button class="tag-btn" id="btn-show-all">Ver todos</button>
+            </div>
+        </section>
+
+        <!-- Estado de Carga -->
+        <div id="loader" class="loader hidden">
+            <div class="spinner"></div>
+            <p>Consultando el catálogo botánico...</p>
+        </div>
+
+        <!-- Mensaje de Estado / Sin Resultados -->
+        <div id="status-message" class="status-message hidden"></div>
+
+        <!-- Cuadrícula de Resultados -->
+        <section id="results-grid" class="results-grid"></section>
+
+    </main>
+
+    <!-- Pie de Página Institucional -->
+    <footer class="footer">
+        <div class="container">
+            <p>Proyecto Integrador de Sistemas de Información | Alumnos de Nivel Medio Superior</p>
+            <p class="disclaimer">⚠️ La medicina tradicional complementa el bienestar comunitario. Consulta a un especialista ante afecciones severas.</p>
+        </div>
+    </footer>
+
+    <!-- Script de la Aplicación -->
+    <script src="js/app.js"></script>
+</body>
+</html>
